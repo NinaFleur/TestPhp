@@ -4,6 +4,8 @@ namespace Tools;
 /**
  * Class Text
  *
+ * git test
+ *
  * @package Vinyl\Tools
  */
 final class Text
