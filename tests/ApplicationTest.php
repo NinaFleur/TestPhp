@@ -21,9 +21,14 @@ class ApplicationTest extends TestCase
         $this->assertEquals(0, count($stack));
     }
 
+    /**
+     * @return bool
+     */
     public function testMyText()
     {
         $text = new Text();
         $this->assertEquals('MyString', $text::camelize('my_string'));
+
+        return true;
     }
 }
