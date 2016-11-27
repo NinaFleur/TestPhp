@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
 use Tools\Text;
+
 /**
  * Class MyStackTest
  */
@@ -30,5 +30,18 @@ class ApplicationTest extends TestCase
         $this->assertEquals('MyString', $text::camelize('my_string'));
 
         return true;
+    }
+
+    public function testru2lat()
+    {
+        $text = new Text();
+        $testData = [
+            'khome' => 'хоме',
+            'test'  => 'тест"'
+        ];
+
+        foreach ($testData as $expected => $actual) {
+            $this->assertEquals($expected, $text::ru2lat($actual));
+        }
     }
 }
